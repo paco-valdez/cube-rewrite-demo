@@ -1,0 +1,23 @@
+{
+  "measures": [
+    "EstimatedOpportunity.hcpCount",
+    "EstimatedOpportunity.socCount",
+    "EstimatedOpportunity.opportunityValue"
+  ],
+  "dimensions": ["ZipcodeLocation.zipCode"],
+  "order": {
+    "ZipcodeLocation.count": "desc"
+  },
+  "filters": [
+    {
+      "member": "EstimatedOpportunity.productId",
+      "operator": "in",
+      "values": ["5", null]
+    },
+    {
+      "member": "ZipcodeLocation.state",
+      "operator": "equals",
+      "values": ["NY"]
+    }
+  ]
+}
